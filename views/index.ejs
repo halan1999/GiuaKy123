@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Sinh Vien</title>
+    <style>
+      table{ border: 1px crimson; text-align: center; width: 80%; border-collapse: collapse;border: black; border: 1px solid black;}
+      td,th{
+         background-color: #4CAF50;
+         color: white;
+      }
+      tr{border: black;}
+     </style>
+  </head>
+  <body>
+    
+        <h1 style="text-align: center">Danh Sach Sinh Vien</h1>
+        <br><br><br>
+        <center><table >
+          <tr>
+            <th>ID</th>
+            <th>Ho Ten</th>
+            <th>Lop</th>
+            <!-- <th>Hanh Dong</th> -->
+          </tr>
+          <% for(let i=0; i < dataSV.length; i++) { %>
+          <tr>
+            <td><%=dataSV[i].MaSinhVien %></td>
+            <td><%=dataSV[i].hoTen %></td>
+            <td><%=dataSV[i].lop %></td>
+            <!-- <td><img src="<%=dataSV[i].avatar%>" width="150px" height="150px" /></td> -->
+            <!-- <td>
+              <form action="/delete" method="POST">
+                <input type="hidden" name="idSV" value="<%=dataSV[i].id %>" />
+                <button type="submit">Xóa</button>
+              </form>
+              <form action="/update" method="POST">
+                <input type="hidden" name="idSV" value="<%=dataSV[i].id %>" />
+                <input type="hidden" name="maSV" value="<%=dataSV[i].maSV %>" />
+                <input
+                  type="hidden"
+                  name="tenSV"
+                  value="<%=dataSV[i].tenSV %>"
+                />
+                <input
+                  type="hidden"
+                  name="ngaySinh"
+                  value="<%=dataSV[i].ngaySinh %>"
+                />
+                <button>Sửa</button>
+              </form>
+            </td> -->
+          </tr> 
+          <% } %>
+        </table></center>
+      </div>
+    </div>
+  </body>
+</html>
